@@ -20,11 +20,6 @@ int print_string(va_list arg)
 
 	return (len);
 }
-/**
- * print_S - print a S.
- * @arg: string to print.
- * Return: string representation.
-*/
 int print_S(va_list arg)
 {
 	char *haruma = va_arg(arg, char *);
@@ -41,14 +36,13 @@ int print_S(va_list arg)
 		if (haruma[i] < 32 || haruma[i] >= 127)
 		{
 			len += _putchar('\\');
-			len += _putchar('x');
-			len += _putchar(48);
-			len += _printf("%X", haruma[i]);
+            len += _putchar('x');
+			len += _put_HEX(haruma[i]);
 		}
 		else
 		{
-			len += _putchar(haruma[i]);
-		}
+            len += _putchar(haruma[i]);
+        }
 	}
 	return (len);
 }

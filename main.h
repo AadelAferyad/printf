@@ -23,8 +23,7 @@ int h_Integer(int n);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _puts(char *s);
-int _puts_HEX(int n);
-
+int _put_HEX(char c);
 int print_char(va_list arg);
 int print_string(va_list arg);
 int print_integer(va_list arg);

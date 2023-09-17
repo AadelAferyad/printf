@@ -45,3 +45,12 @@ int reverse(char *str)
 	}
 	return (len);
 }
+
+int _put_HEX(char c)
+{
+	int len = 0;
+
+	len += _putchar((c / 16 < 10) ?  c / 16 + '0' : c / 16 + 87 );
+	len += _putchar((c % 16 < 10) ?  c % 16 + '0' : c % 16 + 87 );
+	return (len);
+}
