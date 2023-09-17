@@ -16,4 +16,5 @@ The printf function is used to print formatted output to the standard output str
 ###
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=2000&pause=500&color=f034fd&multiline=true&width=355&height=80&lines=printf%28%22Printf%20project%20collab%20;AadelAferyad%20and%20ACHUX21%22%29%3B)](https://git.io/typing-svg)
+
 ## [AadelAferyad](https://github.com/AadelAferyad) / [ACHUX21](https://github.com/ACHUX21)
