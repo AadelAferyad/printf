@@ -1,6 +1,5 @@
 
 # 0x11 -> Printf
-
 ## </br>[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=35&pause=1000&color=f034fd&width=800&lines=-------------------------------------)](https://git.io/typing-svg)
 
 
