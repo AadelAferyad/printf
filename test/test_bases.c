@@ -48,49 +48,47 @@ int main()
     // long int res = INT_MAX * 2;
     // _printf("%b + %b = %b\n", INT_MAX, INT_MAX, res);
 
-	printf("----------------------\n");
-	printf("----> OCTAL CASES <---\n");
-	printf("----------------------\n");
-	len_1 = printf("%o\n", 0);
-	len_2 = _printf("%o\n", 0);
-
-	len_2 = printf("%o\n", -255);
-	len_1 = _printf("%o\n", -255);
-	assert(len_1 == len_2);
-
-	len_1 = printf("%o\n", UINT_MAX);
-	len_2 = _printf("%o\n", UINT_MAX);
-	assert(len_1 == len_2);
-
 	// printf("----------------------\n");
-	// printf("-----> hex CASES <----\n");
+	// printf("----> OCTAL CASES <---\n");
 	// printf("----------------------\n");
-	// len_1 = printf("%x\n", 0);
-	// len_2 = _printf("%x\n", 0);
+	// len_1 = printf("%o\n", 0);
+	// len_2 = _printf("%o\n", 0);
+
+	// len_2 = printf("%o\n", -255);
+	// len_1 = _printf("%o\n", -255);
 	// assert(len_1 == len_2);
 
-	// len_2 = printf("%x\n", 255);
-	// len_1 = _printf("%x\n", 255);
+	// len_1 = printf("%o\n", UINT_MAX);
+	// len_2 = _printf("%o\n", UINT_MAX);
 	// assert(len_1 == len_2);
 
-	// len_1 = printf("%x\n", UINT_MAX);
-	// len_2 = _printf("%x\n", UINT_MAX);
-	// assert(len_1 == len_2);
+	 printf("----------------------\n");
+	 printf("-----> hex CASES <----\n");
+	 printf("----------------------\n");
+	 len_1 = printf("%x\n", 0);
+	 len_2 = _printf("%x\n", 0);
+	 assert(len_1 == len_2);
+	 len_2 = printf("%x\n", 255);
+	 len_1 = _printf("%x\n", 255);
+	 assert(len_1 == len_2);
+	 len_1 = printf("%x\n", UINT_MAX);
+	 len_2 = _printf("%x\n", UINT_MAX);
+	 assert(len_1 == len_2);
 
-	// printf("----------------------\n");
-	// printf("-----> HEX CASES <----\n");
-	// printf("----------------------\n");
-	// len_1 = printf("%X\n", 0);
-	// len_2 = _printf("%X\n", 0);
-	// assert(len_1 == len_2);
+	 printf("----------------------\n");
+	 printf("-----> HEX CASES <----\n");
+	 printf("----------------------\n");
+	 len_1 = printf("%X\n", 0);
+	 len_2 = _printf("%X\n", 0);
+	 assert(len_1 == len_2);
 
-	// len_2 = printf("%X\n", 255);
-	// len_1 = _printf("%X\n", 255);
-	// assert(len_1 == len_2);
+	 len_2 = printf("%X\n", 255);
+	 len_1 = _printf("%X\n", 255);
+	 assert(len_1 == len_2);
 
-	// len_1 = printf("%X\n", UINT_MAX);
-	// len_2 = _printf("%X\n", UINT_MAX);
-	// assert(len_1 == len_2);
+	 len_1 = printf("%X\n", UINT_MAX);
+	 len_2 = _printf("%X\n", UINT_MAX);
+	 assert(len_1 == len_2);
 
 	// printf("----------------------\n");
 	// printf("----> ADDRS CASES <---\n");

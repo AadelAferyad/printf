@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 	fm format_redear[] = {{"%c", print_char}, {"%s", print_string},
 							{"%d", print_integer}, {"%i", print_integer},
 							{"%b", print_binary}, {"%o", print_octal},
+							{"%x", print_hex}, {"%X", print_hex},
 							{"%r", print_rev}, {"%R", print_rot}, {NULL, NULL}};
 	va_list arg;
 	int len = 0;
