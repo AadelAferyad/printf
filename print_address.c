@@ -11,7 +11,7 @@ int print_address(va_list args)
 	int done;
 	int i;
 	char temp;
-    char *arr;
+	char *arr;
 
 	if (var == 0)
 		return (_printf("(nil)"));
@@ -31,7 +31,7 @@ int print_address(va_list args)
 		var = var / 16;
 	}
 
-    /* swap */
+	/* swap */
 	for (i = 0; i < num / 2; i++)
 	{
 		temp = arr[i];
@@ -39,7 +39,7 @@ int print_address(va_list args)
 		arr[num - 1 - i] = temp;
 	}
 	arr[num] = '\0';
-    num+=2; /*len  + 0x*/
+	num += 2;
 
 	_printf("0x%s", arr);
 
