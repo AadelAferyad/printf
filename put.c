@@ -24,6 +24,11 @@ int _puts(char *s)
 		_putchar(s[i]);
 	return (i);
 }
+/**
+ * reverse - print reverse array.
+ * @str: pointer to int array of int.
+ * Return: return length.
+*/
 
 int reverse(char *str)
 {
