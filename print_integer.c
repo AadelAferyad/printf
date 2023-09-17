@@ -49,6 +49,11 @@ int print_integer(va_list arg)
 
 	return (h_Integer(n));
 }
+/**
+ * print_unsigned - Prints an unsigned integer.
+ * @arg: The argument list containing the un integer to be printed.
+ * Return: The number of characters printed.
+ */
 
 int print_unsigned(va_list arg)
 {
@@ -57,19 +62,19 @@ int print_unsigned(va_list arg)
 	int i = 0;
 	int len = 0;
 
-    if (n == 0)
-        _putchar('0');
-    else
-    {
-        while (n)
-        {
-            arr[i] = (n % 10 + '0');
-            n /= 10;
+	if (n == 0)
+		_putchar('0');
+	else
+	{
+		while (n)
+		{
+			arr[i] = (n % 10 + '0');
+			n /= 10;
 			i++;
-        }
-    }
+		}
+	}
 
 	arr[i] = '\0';
 	len = reverse(arr);
-    return (len);
+	return (len);
 }
