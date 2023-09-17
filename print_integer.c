@@ -39,8 +39,8 @@ int h_Integer(int n)
 }
 /**
  * print_integer - Prints an integer.
- * @arg: The argument list containing the integer to be printed
- * Return: The number of	 characters printed
+ * @arg: The argument list containing the integer to be printed.
+ * Return: The number of characters printed.
  */
 
 int print_integer(va_list arg)
