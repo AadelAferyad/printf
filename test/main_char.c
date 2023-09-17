@@ -5,8 +5,6 @@
 int main()
 {
 	int len_1 = 0, len_2 = 0;
-
-/*
 	printf("----------------------\n");
 	printf("----> CHAR CASES <----\n");
 	printf("----------------------\n");
@@ -71,8 +69,6 @@ int main()
 	len_2 = _printf("Current output:     %%%%%%\n");
 	printf("Expected length:    [%d]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
-*/
-	// ! chkoun 7na??
 
 	printf("Expected output:    ");
 
