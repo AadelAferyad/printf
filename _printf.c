@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 	fm format_redear[] = {{"%c", print_char}, {"%s", print_string},
 							{"%d", print_integer}, {"%i", print_integer}, {"%u", print_unsigned},
-							{"%b", print_binary}, {"%o", print_octal},
+							{"%b", print_binary}, {"%o", print_octal}, {"%S", print_S},
 							{"%x", print_hex}, {"%X", print_HEX},
 							{"%r", print_rev}, {"%R", print_rot}, {NULL, NULL}};
 	va_list arg;
@@ -68,4 +68,8 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 	}
 	va_end(arg);
 	return (len);
+}
+int main(void) {
+    _printf("%S", "Best\nSchool");
+    return 0;
 }
