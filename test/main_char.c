@@ -82,7 +82,7 @@ int main()
 	printf("Expected output:    ");
 	len_1 = printf("%   ");
 	printf("\n");
-	printf("Current output:     ");
+	printf("Current output:     "); /*"%  "*/
 	len_2 = _printf("%   ");
 	printf("\n");
 	printf("Expected length:    [%d]\n", len_1);
