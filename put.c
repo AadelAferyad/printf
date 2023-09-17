@@ -50,7 +50,7 @@ int _put_HEX(char c)
 {
 	int len = 0;
 
-	len += _putchar((c / 16 < 10) ?  (c / 16) + '0' : (c / 16) + 55 );
-	len += _putchar((c % 16 < 10) ?  (c % 16) + '0' : (c % 16) + 55 );
+	len += _putchar((c / 16 < 10) ? (c / 16) + '0' : (c / 16) + 55 );
+	len += _putchar((c % 16 < 10) ? (c % 16) + '0' : (c % 16) + 55 );
 	return (len);
 }
