@@ -17,3 +17,19 @@
  *
  * @f: The specifier.
  * @print: The function associated.
+#ifndef PRINTF_H
+#define PRINTF_H
+
+#include <unistd.h>
+#include <stdarg.h>
+
+/**
+ * struct formats - Struct formats
+ *
+ * @f: The specifier.
+ * @print: The function associated.
+ */
+
+struct formats
+{
+	char *f;
