@@ -6,25 +6,35 @@
  * Return: length.
 */
 
-
 int print_rot(va_list arg)
 {
-	int i = -1;
-	char *s;
+	char *s = va_arg(arg, char *);
+	char c;
+	int i = -1, j = -1, len = 0;
+	char arr1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char arr2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	s = va_arg(arg, char *);
-	while (s[++i])
+	if (s == NULL)
 	{
-		while ((s[i] >= 97 && s[i] <= 122) || (s[i] >= 65 && s[i] <= 90))
-		{
-			if ((s[i] >= 'n' && s[i] <= 'z') || (s[i] >= 'N' && s[i]  <= 'Z'))
-			{
-				s[i] = (int) s[i] - 13;
-				i++;
-				continue;
-			}
-			s[i] += 13;
-		}
+		s = "(null)";
+		len += _puts(s);
+		return (len);
 	}
-	return (i);
+
+	while (s[++i] != '\0')
+	{
+		c = s[i];
+		j = -1;
+		while (arr1[++j] != '\0')
+		{
+			if (c == arr1[j])
+			{
+				c = arr2[j];
+				break;
+			}
+		}
+		len += _putchar(c);
+	}
+
+	return (len);
 }
