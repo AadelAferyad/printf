@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * print_string - print a string representation
+ * @arg: string to print
+ * Return: string representation
+*/
 int print_string(va_list arg)
 {
 	char *str;
