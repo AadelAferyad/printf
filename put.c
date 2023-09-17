@@ -45,12 +45,17 @@ int reverse(char *str)
 	}
 	return (len);
 }
+/**
+ * _put_HEX - print hex string with given string
+ * @c: pointer to int array
+ * Return: return length of string
+*/
 
 int _put_HEX(char c)
 {
 	int len = 0;
 
-	len += _putchar((c / 16 < 10) ? (c / 16) + '0' : (c / 16) + 55 );
-	len += _putchar((c % 16 < 10) ? (c % 16) + '0' : (c % 16) + 55 );
+	len += _putchar((c / 16 < 10) ? (c / 16) + '0' : (c / 16) + 55);
+	len += _putchar((c % 16 < 10) ? (c % 16) + '0' : (c % 16) + 55);
 	return (len);
 }
