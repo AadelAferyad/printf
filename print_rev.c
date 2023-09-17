@@ -2,7 +2,7 @@
 /**
  * print_rev - print the reverse of the current va_list
  * @arg: va_list to print
- * 
+ * Return: length of the reverse
 */
 int print_rev(va_list arg)
 {
