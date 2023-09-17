@@ -28,90 +28,104 @@ int print_binary(va_list arg)
 
 	return (num);
 }
-
+/**
+ * print_octal - print octal information
+ * @arg: argument.
+ * Return: length.
+*/
 int print_octal(va_list arg)
 {
 	unsigned int n;
-    char arr[100];
-    int num = 0;
+	char arr[100];
+	int num = 0;
 
-    n = va_arg(arg, unsigned int);
+	n = va_arg(arg, unsigned int);
 
-    if (n == 0)
-    {
-        _putchar(48);
-        num++;
-        return (num);
-    }
+	if (n == 0)
+	{
+		_putchar(48);
+		num++;
+		return (num);
+	}
 
-    for (; n > 0; n = n / 8)
-    {
-        arr[num] = (n % 8) + 48;
-        num++;
-    }
-    arr[num] = '\0';
-    reverse(arr);
+	for (; n > 0; n = n / 8)
+	{
+		arr[num] = (n % 8) + 48;
+		num++;
+	}
+	arr[num] = '\0';
+	reverse(arr);
 
-    return (num);
+	return (num);
 }
-
+/**
+ * print_hex - print hexadecimal information
+ * @arg: argument.
+ * Return: length.
+*/
 int print_hex(va_list arg)
 {
 	unsigned int n;
-    char arr[100];
-    int num = 0;
+	char arr[100];
+	int num = 0;
 	int hex = 0;
 
-    n = va_arg(arg, unsigned int);
+	n = va_arg(arg, unsigned int);
 
-    if (n == 0)
-    {
-        _putchar(48);
-        num++;
-        return (num);
-    }
+	if (n == 0)
+	{
+		_putchar(48);
+		num++;
+		return (num);
+	}
 
-    for (; n > 0; n = n / 16)
-    {
+	for (; n > 0; n = n / 16)
+	{
 		hex = (n % 16);
 		if (hex < 10)
-            arr[num] = hex + 48;
+			arr[num] = hex + 48;
 		else
 			arr[num] = hex + 87;
-        num++;
-    }
-    arr[num] = '\0';
-    reverse(arr);
+		num++;
+	}
+	arr[num] = '\0';
+	reverse(arr);
 
-    return (num);
+	return (num);
 }
+/**
+ * print_HEX - print hexadecimal information
+ * @arg: argument.
+ * Return: length.
+*/
+
 int print_HEX(va_list arg)
 {
 	unsigned int n;
-    char arr[100];
-    int num = 0;
+	char arr[100];
+	int num = 0;
 	int hex = 0;
 
-    n = va_arg(arg, unsigned int);
+	n = va_arg(arg, unsigned int);
 
-    if (n == 0)
-    {
-        _putchar(48);
-        num++;
-        return (num);
-    }
+	if (n == 0)
+	{
+		_putchar(48);
+		num++;
+		return (num);
+	}
 
-    for (; n > 0; n = n / 16)
-    {
+	for (; n > 0; n = n / 16)
+	{
 		hex = (n % 16);
 		if (hex < 10)
-            arr[num] = hex + 48;
+			arr[num] = hex + 48;
 		else
 			arr[num] = hex + 87 - 32;
-        num++;
-    }
-    arr[num] = '\0';
-    reverse(arr);
+		num++;
+	}
+	arr[num] = '\0';
+	reverse(arr);
 
-    return (num);
+	return (num);
 }
