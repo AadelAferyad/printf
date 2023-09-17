@@ -11,7 +11,7 @@
 
 
 ## Printf Project
-This project is an implementation of the printf function in the C programming language. </br>
+This project is An implementation of the printf function in the C programming language. </br>
 The printf function is used to print formatted output to the standard output stream.
 ###
 
