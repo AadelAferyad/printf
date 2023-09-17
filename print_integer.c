@@ -65,7 +65,7 @@ int print_unsigned(va_list arg)
 	if (n == 0)
 	{
 		_putchar('0');
-		len++;
+		return (1);
 	}
 	else
 	{
