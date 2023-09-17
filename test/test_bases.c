@@ -47,7 +47,7 @@ int main()
     // Test case 8
     long int res = INT_MAX * 2;
     _printf("%b + %b = %b\n", INT_MAX, INT_MAX, res);
-/*
+
 	printf("----------------------\n");
 	printf("----> OCTAL CASES <---\n");
 	printf("----------------------\n");
