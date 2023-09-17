@@ -1,4 +1,4 @@
-
+#include "main.h"
 int print_rev(va_list arg)
 {
 	char *str;
