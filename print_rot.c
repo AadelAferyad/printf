@@ -19,5 +19,5 @@ int print_rot(va_list arg)
 			s[i] += 13;
 		}
 	}
-	return (i   )  ;
+	return (i   );
 }
