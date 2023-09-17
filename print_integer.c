@@ -49,3 +49,27 @@ int print_integer(va_list arg)
 
 	return (h_Integer(n));
 }
+
+int print_unsigned(va_list arg)
+{
+	unsigned int n = va_arg(arg, unsigned int);
+	char arr[19];
+	int i = 0;
+	int len = 0;
+
+    if (n == 0)
+        _putchar('0');
+    else
+    {
+        while (n)
+        {
+            arr[i] = (n % 10 + '0');
+            n /= 10;
+			i++;
+        }
+    }
+
+	arr[i] = '\0';
+	len = reverse(arr);
+    return (len);
+}

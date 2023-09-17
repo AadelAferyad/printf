@@ -31,6 +31,7 @@ int print_binary(va_list arg);
 int print_octal(va_list arg);
 int print_hex(va_list arg);
 int print_HEX(va_list arg);
+int print_unsigned(va_list arg);
 int fun_helper(const char *format, va_list arg, struct formats *format_redear);
 int reverse(char *arr);
 int print_rot(va_list arg);
