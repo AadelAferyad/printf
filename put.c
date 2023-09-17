@@ -24,3 +24,19 @@ int _puts(char *s)
 		_putchar(s[i]);
 	return (i);
 }
+
+int reverse(char *str)
+{
+	int i = 0, len = -1;
+	char *arr = str;
+
+
+	while (arr[++len])
+		;
+
+	for (i = len - 1; i >= 0; i--)
+	{
+		_putchar(arr[i]);
+	}
+	return (len);
+}
