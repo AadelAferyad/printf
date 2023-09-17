@@ -69,7 +69,3 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 	va_end(arg);
 	return (len);
 }
-int main(void) {
-    _printf("%S", "Best\nSchool");
-    return 0;
-}
