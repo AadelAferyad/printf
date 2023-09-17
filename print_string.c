@@ -14,6 +14,5 @@ int print_string(va_list arg)
 	else
 		len = _puts(str);
 
-	
+	return (len);
 }
-
