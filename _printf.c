@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _printf - printf function for printing
- * @format: printf format
+ * _printf - printf function for printing.
+ * @format: printf format.
  * Return: int length of the inpue.
 */
 
@@ -20,13 +20,12 @@ int _printf(const char *format, ...)
 	return (len); /*removed (len - 1)*/
 }
 /**
- * fun_helper - helper function for printingd
- * @format: string
- * @arg: string
- * @format_redear: string
- * Return: Integer representation
+ * fun_helper - helper function for printingd.
+ * @format: string.
+ * @arg: string.
+ * @format_redear: string.
+ * Return: Integer representation.
 */
-
 int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 {
 	int i = -1, j = 0, len = 0, k;
