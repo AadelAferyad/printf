@@ -63,7 +63,10 @@ int print_unsigned(va_list arg)
 	int len = 0;
 
 	if (n == 0)
+	{
 		_putchar('0');
+		len++;
+	}
 	else
 	{
 		while (n)
