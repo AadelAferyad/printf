@@ -10,7 +10,11 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
-
+/**
+ * _puts - print a character.
+ * @s: pointer to character string.
+ * Return: return 1.
+*/
 
 int _puts(char *s)
 {
