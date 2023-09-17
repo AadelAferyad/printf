@@ -2,7 +2,7 @@
 /**
  * h_Integer - Function helper to print integers.
  * @n: integer value.
- * Return: The number of characters printed.
+ * Return: The number of characters printed (length).
  */
 int h_Integer(int n)
 {
