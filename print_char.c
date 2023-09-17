@@ -12,4 +12,3 @@ int print_char(va_list arg)
 	_putchar(str);
 	return (1);
 }
-
