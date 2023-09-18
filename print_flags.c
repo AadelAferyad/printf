@@ -1,21 +1,23 @@
 #include "main.h"
 
-
-
-
+/**
+ * plus_flag - printf + flag.
+ * @arg: va arg.
+ * @format: printf format.
+ * Return: int length of the inpue.
+*/
 int plus_flag(va_list arg, const char *format)
 {
 	int i = 0, j = 0, found = 0, len = 0;
-	i = va_arg(arg, int);
 
-	while (format[j])
+	i = va_arg(arg, int);
+	while (format[j++])
 	{
-		if (format[j] == 'd' || format[j] == 'i' )
+		if (format[j] == 'd' || format[j] == 'i')
 		{
-			found ++;
+			found++;
 			break;
 		}
-		j++;
 	}
 	if (found != 1)
 		return (-1);
@@ -27,7 +29,7 @@ int plus_flag(va_list arg, const char *format)
 	{
 		len += _putchar('+');
 		len += _printf("%d", i);
-		return(len);
+		return (len);
 	}
 	else
 	{
@@ -35,16 +37,21 @@ int plus_flag(va_list arg, const char *format)
 	}
 	return (len);
 }
-
-
+/**
+ * hashtag_flag - printf # flag.
+ * @arg: va arg.
+ * @format: printf format.
+ * Return: int length of the inpue.
+*/
 int hashtag_flag(va_list arg, const char *format)
 {
 	int i = 0, j = 0, found = 0, len = 0;
+
 	i = va_arg(arg, int);
 
 	while (format[j])
 	{
-		if (format[j] == 'x')
+		if (format[j++] == 'x')
 		{
 			found = 1;
 			break;
@@ -59,7 +66,6 @@ int hashtag_flag(va_list arg, const char *format)
 			found = 3;
 			break;
 		}
-		j++;
 	}
 	if (found != 1)
 		return (-1);
@@ -73,12 +79,10 @@ int hashtag_flag(va_list arg, const char *format)
 		len += _printf("0");
 		len += _printf("%o", i);
 	}
-	else if (found = 3)
+	else if (found == 3)
 	{
 		len += _printf("0x");
 		len += _printf("%X", i);
 	}
-
-
 	return (len);
 }
