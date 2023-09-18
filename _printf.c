@@ -53,6 +53,8 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 			{
 				i++;
 				len += plus_flag(arg, format + i);
+				_putchar('\n');
+				break;
 			}
 			while (format_redear[j].f) /* %   yd*/
 			{
