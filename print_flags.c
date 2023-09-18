@@ -54,17 +54,30 @@ int hashtag_flag(va_list arg, const char *format)
 			found = 2;
 			break;
 		}
+		else if (format[j] == 'X')
+		{
+			found = 3;
+			break;
+		}
 		j++;
 	}
 	if (found != 1)
 		return (-1);
 	else if (found == 1)
 	{
-		len += _printf("0X");
+		len += _printf("0x");
+		len += _printf("%x", i);
 	}
-	else
-		len += _printf("O");
-
+	else if (found == 2)
+	{
+		len += _printf("0");
+		len += _printf("%o", i);
+	}
+	else if (found = 3)
+	{
+		len += _printf("0x");
+		len += _printf("%X", i);
+	}
 
 
 	return (len);

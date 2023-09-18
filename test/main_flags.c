@@ -91,62 +91,62 @@ int main(void)
 	// printf("Expected length:    [%d]\n", len_2);
 
 	// /* Test the (#) flag with [o, x, X ] conversion specifiers */
-	// printf("----------------------\n");
-	// printf("-----> (#) FLAG <-----\n");
-	// printf("----------------------\n");
-	// len_1 = _printf("%#o\n", 123);
-	// len_2 = printf("%#o\n", 123);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	printf("----------------------\n");
+	printf("-----> (#) FLAG <-----\n");
+	printf("----------------------\n");
+	len_1 = _printf("%#o\n", 123);
+	len_2 = printf("%#o\n", 123);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = _printf("%#o\n", 0);
-	// len_2 = printf("%#o\n", 0);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = _printf("%#o\n", 0);
+	len_2 = printf("%#o\n", 0);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = _printf("%#u\n", UINT_MAX);
-	// len_2 = printf("%#u\n", UINT_MAX);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = _printf("%#u\n", UINT_MAX);
+	len_2 = printf("%#u\n", UINT_MAX);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = _printf("%#o\n", UINT_MAX);
-	// len_2 = printf("%#o\n", UINT_MAX);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = _printf("%#o\n", UINT_MAX);
+	len_2 = printf("%#o\n", UINT_MAX);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = _printf("%#x\n", UINT_MAX);
-	// len_2 = printf("%#x\n", UINT_MAX);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = _printf("%#x\n", UINT_MAX);
+	len_2 = printf("%#x\n", UINT_MAX);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = _printf("%#X\n", UINT_MAX);
-	// len_2 = printf("%#X\n", UINT_MAX);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = _printf("%#X\n", UINT_MAX);
+	len_2 = printf("%#X\n", UINT_MAX);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = _printf("%#x\n", 123);
-	// len_2 = printf("%#x\n", 123);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = _printf("%#x\n", 123);
+	len_2 = printf("%#x\n", 123);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = printf("%#x", 0);
-	// printf("\n");
-	// len_2 = _printf("%#x", 0);
-	// printf("\n");
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = printf("%#x", 0);
+	printf("\n");
+	len_2 = _printf("%#x", 0);
+	printf("\n");
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = _printf("%#X\n", 123);
-	// len_2 = printf("%#X\n", 123);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = _printf("%#X\n", 123);
+	len_2 = printf("%#X\n", 123);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = printf("%#X", 0);
-	// printf("\n");
-	// len_2 = _printf("%#X", 0);
-	// printf("\n");
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = printf("%#X", 0);
+	printf("\n");
+	len_2 = _printf("%#X", 0);
+	printf("\n");
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
 	// /* Test combination of (space) & (+) with positive / negative int's */
 	// printf("----------------------\n");
