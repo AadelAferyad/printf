@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
-#include ".. /main.h"
+#include "../main.h"
 
 int main(void)
 {
@@ -43,7 +43,7 @@ int main(void)
 	printf("Current length:     [%d]\n", len_1);
 	printf("Expected length:    [%d]\n", len_2);
 
-	len_1 = _printf("%+i\n", 0);
+	len_1 = _printf("%+s hello\n", "ad", "dd", "dd");
 	len_2 = printf("%+i\n", 0);
 	printf("Current length:     [%d]\n", len_1);
 	printf("Expected length:    [%d]\n", len_2);

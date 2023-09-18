@@ -40,5 +40,5 @@ int print_S(va_list arg);
 int print_rot(va_list arg);
 int print_address(va_list args);
 int plus_flag(va_list arg, const char *format);
-
+int hashtag_flag(va_list arg, const char *format);
 #endif /*PRINTF_H*/
