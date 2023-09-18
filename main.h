@@ -39,5 +39,6 @@ int print_unsigned(va_list arg);
 int print_S(va_list arg);
 int print_rot(va_list arg);
 int print_address(va_list args);
+int plus_flag(va_list arg, char *format);
 
 #endif /*PRINTF_H*/

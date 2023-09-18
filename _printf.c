@@ -4,7 +4,6 @@
  * @format: printf format.
  * Return: int length of the inpue.
 */
-
 int _printf(const char *format, ...)
 {
 	fm format_redear[] = {{"%c", print_char}, {"%s", print_string},
@@ -49,6 +48,11 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 			{
 				len = _putchar(format[i]);
 				return (len);
+			}
+			if (format[i + 1] == '+') /*"%+d"*/
+			{
+				i++;
+				len += plus_flag(arg, format + i);
 			}
 			while (format_redear[j].f) /* %   yd*/
 			{
