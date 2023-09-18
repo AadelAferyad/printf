@@ -43,7 +43,7 @@ int main(void)
 	printf("Current length:     [%d]\n", len_1);
 	printf("Expected length:    [%d]\n", len_2);
 
-	len_1 = _printf("%+s hello\n", "ad", "dd", "dd");
+	len_1 = _printf("%+i\n", 0);
 	len_2 = printf("%+i\n", 0);
 	printf("Current length:     [%d]\n", len_1);
 	printf("Expected length:    [%d]\n", len_2);
@@ -104,8 +104,8 @@ int main(void)
 	printf("Current length:     [%d]\n", len_1);
 	printf("Expected length:    [%d]\n", len_2);
 
-	len_1 = _printf("%#u\n", UINT_MAX);
-	len_2 = printf("%#u\n", UINT_MAX);
+	len_1 = _printf("dyali : %#u\n", UINT_MAX);
+	len_2 = printf("dyaalhom : %#u\n", UINT_MAX);
 	printf("Current length:     [%d]\n", len_1);
 	printf("Expected length:    [%d]\n", len_2);
 

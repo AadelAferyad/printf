@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 	int len = 0;
 
 	va_start(arg, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 	len = fun_helper(format, arg, format_redear);
 
 	return (len); /*removed (len - 1)*/
@@ -30,26 +32,25 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 {
 	int i = -1, j = 0, len = 0, k;
 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
 	for (; format[++i]; j = 0, k = 0)
 	{
 		if (format[i] == 37) /* % yd */
 		{
 			if (format[i + 1] == 32 || format[i + 1] == 9) /*%   %*/
-				i++, len++;
+				i++;
 			if (format[i + 1] == 37) /* printf "%%" */
 			{
-				i += 1, len += _putchar(format[i]);
+				i++, len += _putchar(format[i]);
 				continue;
 			}
-			if (format[i + 1] == '\0') /*"%  %" */
+			if (format[i + 1] == '+' || format[i + 1] == '#') /*"%+d"*/
 			{
-				len = _putchar(format[i]);
-				return (len);
+				if (format[i + 1] == '#')
+					len += hashtag_flag(arg, format + i), i += 2;
+				else
+					len += plus_flag(arg, format + i), i += 2;
+				continue;
 			}
-			if (format[i + 1] == '+') /*"%+d"*/
-				i++, len += plus_flag(arg, format + i), i += 2;
 			while (format_redear[j].f) /* %   yd*/
 			{
 				if (format[i + 1] == format_redear[j].f[1])
@@ -57,8 +58,7 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 					len += format_redear[j].print(arg), i++, k = 1;
 					break;
 				}
-				else
-					j++;
+				j++;
 			}
 			if (!k)
 				len += _putchar(format[i]);

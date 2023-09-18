@@ -48,26 +48,25 @@ int hashtag_flag(va_list arg, const char *format)
 	int i = 0, j = 0, found = 0, len = 0;
 
 	i = va_arg(arg, int);
-
-	while (format[j])
+	while (format[j++])
 	{
-		if (format[j++] == 'x')
+		if (format[j] == 'x' || format[j] == 'o' || format[j] == 'X')
 		{
-			found = 1;
-			break;
-		}
-		else if (format[j] == 'o')
-		{
-			found = 2;
-			break;
-		}
-		else if (format[j] == 'X')
-		{
-			found = 3;
+			if (format[j] == 'X')
+				found = 3;
+			else if (format[j] == 'o')
+				found = 2;
+			else
+				found = 1;
 			break;
 		}
 	}
-	if (found != 1)
+	if (i == 0)
+	{
+		len += _printf("0");
+		return (len);
+	}
+	if (found == 0)
 		return (-1);
 	else if (found == 1)
 	{
