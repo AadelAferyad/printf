@@ -32,9 +32,8 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	while (format[++i])
+	for (; format[++i]; j = 0, k = 0)
 	{
-		j = 0, k = 0;
 		if (format[i] == 37) /* % yd */
 		{
 			if (format[i + 1] == 32 || format[i + 1] == 9) /*%   %*/
@@ -50,11 +49,7 @@ int fun_helper(const char *format, va_list arg, struct formats *format_redear)
 				return (len);
 			}
 			if (format[i + 1] == '+') /*"%+d"*/
-			{
-				i++;
-				len += plus_flag(arg, format + i);
-				i += 2;
-			}
+				i++, len += plus_flag(arg, format + i), i += 2;
 			while (format_redear[j].f) /* %   yd*/
 			{
 				if (format[i + 1] == format_redear[j].f[1])
