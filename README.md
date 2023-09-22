@@ -26,11 +26,21 @@ If everything is succesful the function returns the number of characteres printe
 
 | Specifiers      | Description |
 | ----------- | ----------- |
-| %c  | Print single character |
-| %s  | Print string of characteres |
-| %d  | Print decimal numbers|
-| %i  | Print integers |
+| %c  | Print Single character |
+| %s  | Print String of characteres |
+| %S  | Print Non printable characters as (\x) |
+| %d  | Print Decimal numbers|
+| %i  | Print Integers |
 | %p  | Print Adresse |
+| %b  | Print Binary |
+| %u  | Print Unsigned int|
+| %o  | Print Octal |
+| %x  | Print Hexadecimal (lower case) |
+| %X  | Print Hexadecimal (upper case) |
+| %+  | Print Integer followed by plus signe if positive (flag) |
+| %#  | Print 0 for octal, print (0x, 0X) for hexadecimal (flag) |
+| %r  | Print The reversed string |
+| %R  | Print The rot13'ed string |
 
 
 ## Printf Project
