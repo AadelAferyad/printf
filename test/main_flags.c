@@ -148,21 +148,21 @@ int main(void)
 	printf("Current length:     [%d]\n", len_1);
 	printf("Expected length:    [%d]\n", len_2);
 
-	// /* Test combination of (space) & (+) with positive / negative int's */
-	// printf("----------------------\n");
-	// printf("-> (' ') & (+) FLAG <-\n");
-	// printf("----------------------\n");
-	// len_1 = _printf("% +d\n", 123);
-	// len_2 = printf("% +d\n", 123);
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	/* Test combination of (space) & (+) with positive / negative int's */
+	printf("----------------------\n");
+	printf("-> (' ') & (+) FLAG <-\n");
+	printf("----------------------\n");
+	len_1 = _printf("% +d\n", 123);
+	len_2 = printf("% +d\n", 123);
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
-	// len_1 = _printf("% +d + %+ d = % +i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
-	// printf("\n");
-	// len_2 = _printf("% +d + %+ d = % +i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
-	// printf("\n");
-	// printf("Current length:     [%d]\n", len_1);
-	// printf("Expected length:    [%d]\n", len_2);
+	len_1 = _printf("% +d + %+ d = % +i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	printf("\n");
+	len_2 = _printf("% +d + %+ d = % +i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	printf("\n");
+	printf("Current length:     [%d]\n", len_1);
+	printf("Expected length:    [%d]\n", len_2);
 
 	return (0);
 }
